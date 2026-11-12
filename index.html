@@ -15,10 +15,10 @@
                     },
                     colors: {
                         brand: {
-                            light: '#E0F2F1', // 薄いミント
-                            DEFAULT: '#00BFA5', // 鮮やかな青緑
-                            dark: '#00897B', // 深い緑
-                            blue: '#4DD0E1', // 水色
+                            light: '#E0F2F1',
+                            DEFAULT: '#00BFA5',
+                            dark: '#00897B',
+                            blue: '#4DD0E1',
                         }
                     },
                     backgroundImage: {
@@ -29,10 +29,8 @@
         }
     </script>
     <style>
-        /* スムーススクロール */
         html { scroll-behavior: smooth; }
         
-        /* カスタムスライダーのスタイル */
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
@@ -45,7 +43,7 @@
             border-radius: 50%;
             background: #00897B;
             cursor: pointer;
-            margin-top: -10px; /* トラックの中央に配置 */
+            margin-top: -10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             transition: transform 0.1s;
         }
@@ -81,7 +79,6 @@
 
     <!-- ヒーローセクション -->
     <header class="relative pt-24 pb-32 flex items-center justify-center min-h-[80vh] overflow-hidden bg-hero-pattern">
-        <!-- 背景の装飾（波のような図形） -->
         <div class="absolute inset-0 opacity-20">
             <svg class="absolute bottom-0 left-0 w-full h-auto" viewBox="0 0 1440 320" preserveAspectRatio="none">
                 <path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,181.3C672,160,768,96,864,101.3C960,107,1056,181,1152,197.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -102,7 +99,7 @@
         </div>
     </header>
 
-    <!-- マイボトル運動とは？（背景） -->
+    <!-- マイボトル運動とは？ -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -112,7 +109,6 @@
             
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2 flex justify-center">
-                    <!-- SVGイラストの代わり -->
                     <div class="relative w-72 h-72 rounded-full bg-brand-light flex items-center justify-center">
                         <div class="absolute inset-0 border-4 border-dashed border-brand/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
                         <div class="text-center">
@@ -149,37 +145,31 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- メリット1 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        🐢
-                    </div>
+                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🐢</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">ごみの削減</h3>
                     <h4 class="text-brand font-bold mb-4">1人で年間約300本削減</h4>
                     <p class="text-gray-600 leading-relaxed">
-                        毎日使っていた使い捨て容器をマイボトルに替えるだけで、大量のプラスチックごみを減らすことができます。きれいな海と生き物を守る第一歩です。
+                        毎日使っていた使い捨て容器をマイボトルに替えるだけで、大量のプラスチックごみを減らすことができます。
                     </p>
                 </div>
 
                 <!-- メリット2 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        🌍
-                    </div>
+                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🌍</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">CO2の削減</h3>
                     <h4 class="text-brand font-bold mb-4">製造・廃棄時の負荷リセット</h4>
                     <p class="text-gray-600 leading-relaxed">
-                        ボトルを約15〜20回以上繰り返し使うことで、新しくペットボトルを製造・輸送・廃棄する際に出る温室効果ガス（CO2）を相殺し、温暖化防止に貢献します。
+                        新しくペットボトルを製造・輸送・廃棄する際に出る温室効果ガス（CO2）を相殺し、温暖化防止に貢献します。
                     </p>
                 </div>
 
                 <!-- メリット3 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        💰
-                    </div>
+                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">💰</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">経済的な節約</h3>
                     <h4 class="text-brand font-bold mb-4">年間約4万円お得に</h4>
                     <p class="text-gray-600 leading-relaxed">
-                        環境に優しいだけでなく、あなたのお財布にも優しいのが特徴。自宅から飲み物を持参することで、日々の飲料代を大きく節約できます。
+                        環境に優しいだけでなく、あなたのお財布にも優しいのが特徴。日々の飲料代を大きく節約できます。
                     </p>
                 </div>
             </div>
@@ -188,7 +178,6 @@
 
     <!-- インタラクティブ機能「マイボトル節約シミュレーター」 -->
     <section id="simulator" class="py-20 bg-brand-light/50 relative overflow-hidden">
-        <!-- 背景の装飾 -->
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl"></div>
         <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-brand/10 rounded-full blur-3xl"></div>
 
@@ -233,10 +222,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <p class="text-center text-gray-500 mt-8 text-sm">
-                        スライダーを動かして、あなたのライフスタイルに合わせた効果をチェックしてみましょう！
-                    </p>
                 </div>
             </div>
         </div>
@@ -248,14 +233,11 @@
             <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
                 まずは週2回から、<br>マイボトルを持ち歩いてみませんか？
             </h2>
-            <p class="text-xl text-brand-light mb-10 font-medium">
-                完璧でなくて大丈夫。できる日からはじめることが大切です。
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button onclick="alert('給水スポット検索マップへ移動します（デモ用）')" class="bg-white text-brand-dark font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+                <button onclick="searchWaterSpots()" class="bg-white text-brand-dark font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
                     近くの給水スポットを探す
                 </button>
-                <button onclick="alert('SNSでシェアしました！（デモ用）')" class="bg-transparent border-2 border-white text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white/10 transition duration-300">
+                <button onclick="shareToSNS()" class="bg-transparent border-2 border-white text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white/10 transition duration-300">
                     友達にシェアする
                 </button>
             </div>
@@ -266,44 +248,66 @@
     <footer class="bg-gray-900 text-gray-400 py-12 text-center">
         <div class="max-w-6xl mx-auto px-4">
             <p class="text-2xl font-black text-white tracking-tight mb-4">💧 MyBottle<span class="text-brand">Action</span></p>
-            <p class="mb-4 text-sm">課題研究プロジェクト：マイボトル運動を通じた環境保全意識の向上</p>
             <p class="text-xs">&copy; 2026 My Bottle Action Project. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- シミュレーター用のJavaScript -->
+    <!-- 機能用のスクリプト（確実な動作のために書き直し） -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        // ① Googleマップで給水スポット検索
+        function searchWaterSpots() {
+            const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('給水スポット');
+            window.open(url, '_blank');
+        }
+
+        // ② SNSシェア機能
+        function shareToSNS() {
+            const shareData = {
+                title: 'マイボトル運動 - その1本から、未来が変わる。',
+                text: 'マイボトルを使って環境とお財布に優しい生活を始めよう！節約シミュレーターで効果をチェック💧',
+                url: window.location.href
+            };
+            if (navigator.share) {
+                navigator.share(shareData).catch((error) => console.log('シェアキャンセル:', error));
+            } else {
+                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareData.text)}&url=${encodeURIComponent(shareData.url)}`;
+                window.open(twitterUrl, '_blank');
+            }
+        }
+
+        // ③ スライダー連動計算機能
+        // スクリプトが読み込まれたタイミングで確実に要素を取得するよう修正
+        (function() {
             const slider = document.getElementById('bottlesPerWeek');
             const countDisplay = document.getElementById('bottleCountDisplay');
             const savingsDisplay = document.getElementById('savingsDisplay');
             const reducedDisplay = document.getElementById('reducedDisplay');
 
-            const PRICE_PER_BOTTLE = 150; // 1本あたりの値段（円）
-            const WEEKS_PER_YEAR = 52;    // 1年間の週数
+            if (!slider || !countDisplay || !savingsDisplay || !reducedDisplay) {
+                console.error("シミュレーターの要素が見つかりません。HTMLのIDを確認してください。");
+                return;
+            }
+
+            const PRICE_PER_BOTTLE = 150;
+            const WEEKS_PER_YEAR = 52;
 
             function calculateImpact() {
-                const bottlesPerWeek = parseInt(slider.value, 10);
-                
-                // 週間の本数を表示
-                countDisplay.textContent = bottlesPerWeek;
+                const bottles = Number(slider.value);
+                countDisplay.textContent = bottles;
 
-                // 年間の削減本数
-                const yearlyReduced = bottlesPerWeek * WEEKS_PER_YEAR;
-                // アニメーション風に数値を更新（シンプルに直接代入）
+                const yearlyReduced = bottles * WEEKS_PER_YEAR;
                 reducedDisplay.textContent = yearlyReduced.toLocaleString();
 
-                // 年間の節約金額
                 const yearlySavings = yearlyReduced * PRICE_PER_BOTTLE;
                 savingsDisplay.textContent = yearlySavings.toLocaleString();
             }
 
-            // スライダーが動くたびに計算を実行
+            // スライダーを動かした時のイベントを登録
             slider.addEventListener('input', calculateImpact);
             
-            // 初期状態の計算を実行
+            // 開いた瞬間の初期計算
             calculateImpact();
-        });
+        })();
     </script>
 </body>
 </html>
