@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>マイボトル運動 - その1本から、未来が変わる。</title>
+    <!-- Tailwind CSS (スタイリング用) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <script>
@@ -31,6 +32,7 @@
     <style>
         html { scroll-behavior: smooth; }
         
+        /* スライダーのカスタムデザイン */
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
@@ -125,58 +127,12 @@
                     <p class="text-lg text-gray-700 leading-relaxed">
                         リサイクルされているものも多い一方で、海へ流れ出る「海洋プラスチックごみ問題」や、製造・輸送・廃棄にかかる膨大なエネルギーとCO2排出が深刻な地球環境の課題となっています。
                     </p>
-                    <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-brand">
-                        <h3 class="font-bold text-brand-dark text-lg mb-2">マイボトル運動とは？</h3>
-                        <p class="text-gray-600">使い捨て容器の代わりに、繰り返し使えるお気に入りのボトルを持ち歩くことで、ごみとCO2を減らす身近なエコアクションです。</p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3つの大きなメリット -->
-    <section id="benefits" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">マイボトルがもたらす3つの効果</h2>
-                <div class="w-24 h-1 bg-brand mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- メリット1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🐢</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">ごみの削減</h3>
-                    <h4 class="text-brand font-bold mb-4">1人で年間約300本削減</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        毎日使っていた使い捨て容器をマイボトルに替えるだけで、大量のプラスチックごみを減らすことができます。
-                    </p>
-                </div>
-
-                <!-- メリット2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🌍</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">CO2の削減</h3>
-                    <h4 class="text-brand font-bold mb-4">製造・廃棄時の負荷リセット</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        新しくペットボトルを製造・輸送・廃棄する際に出る温室効果ガス（CO2）を相殺し、温暖化防止に貢献します。
-                    </p>
-                </div>
-
-                <!-- メリット3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">💰</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">経済的な節約</h3>
-                    <h4 class="text-brand font-bold mb-4">年間約4万円お得に</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        環境に優しいだけでなく、あなたのお財布にも優しいのが特徴。日々の飲料代を大きく節約できます。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- インタラクティブ機能「マイボトル節約シミュレーター」 -->
+    <!-- シミュレーション -->
     <section id="simulator" class="py-20 bg-brand-light/50 relative overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl"></div>
         <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-brand/10 rounded-full blur-3xl"></div>
@@ -234,11 +190,12 @@
                 まずは週2回から、<br>マイボトルを持ち歩いてみませんか？
             </h2>
             <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-                <button onclick="searchWaterSpots()" class="bg-white text-brand-dark font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
-                    近くの給水スポットを探す
+                <button onclick="openMapModal()" class="bg-white text-brand-dark font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
+                    📍 近くの給水スポットを探す
                 </button>
-                <button onclick="shareToSNS()" class="bg-transparent border-2 border-white text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white/10 transition duration-300">
-                    友達にシェアする
+                
+                <button onclick="openShareModal()" class="bg-transparent border-2 border-white text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white/10 transition duration-300">
+                    📢 友達にシェアする
                 </button>
             </div>
         </div>
@@ -252,41 +209,95 @@
         </div>
     </footer>
 
-    <!-- 機能用のスクリプト（確実な動作のために書き直し） -->
+    <!-- 給水マップのモーダル -->
+    <div id="mapModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-opacity">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b bg-gray-50">
+                <h3 class="text-xl font-bold text-gray-800">💧 近くの給水スポット</h3>
+                <button onclick="closeMapModal()" class="text-gray-400 hover:text-gray-800 text-3xl font-bold leading-none px-2">&times;</button>
+            </div>
+            <div class="w-full h-[60vh] md:h-[600px] flex justify-center items-center bg-gray-100">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1ensIznMuI2LncBOPjry2AtLCHHCMvJQ0&ehbc=2E312F" width="100%" height="100%" class="border-0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- 確実なSNSシェア用のモーダル -->
+    <div id="shareModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-opacity">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-sm p-6 text-center">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">このページをシェアする</h3>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <!-- X (Twitter) -->
+                <button onclick="shareTwitter()" class="bg-black text-white w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-800 transition transform hover:scale-110 shadow-md">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                </button>
+                
+                <!-- LINE -->
+                <button onclick="shareLine()" class="bg-[#06C755] text-white w-14 h-14 rounded-full flex items-center justify-center hover:bg-[#05b34c] transition transform hover:scale-110 shadow-md font-bold text-2xl">
+                    L
+                </button>
+
+                <!-- リンクコピー -->
+                <button onclick="copyLink()" class="bg-gray-200 text-gray-700 w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-300 transition transform hover:scale-110 shadow-md text-2xl">
+                    🔗
+                </button>
+            </div>
+
+            <button onclick="closeShareModal()" class="w-full bg-gray-100 text-gray-600 font-bold py-3 rounded-xl hover:bg-gray-200 transition">
+                閉じる
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script>
-        // ① Googleマップで給水スポット検索
-        function searchWaterSpots() {
-            const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('給水スポット');
+        // --- 給水マップモーダル ---
+        function openMapModal() {
+            document.getElementById('mapModal').classList.remove('hidden');
+        }
+        function closeMapModal() {
+            document.getElementById('mapModal').classList.add('hidden');
+        }
+
+        // --- シェアモーダルと各SNS機能 ---
+        // ※自分のサイトを公開した際は、dummyUrlを実際のサイトのURLに変更してください
+        const dummyUrl = 'https://example.com/mybottle'; 
+        const shareText = 'マイボトルを使って環境とお財布に優しい生活を始めよう！節約シミュレーターで効果をチェック💧';
+
+        function openShareModal() {
+            document.getElementById('shareModal').classList.remove('hidden');
+        }
+        function closeShareModal() {
+            document.getElementById('shareModal').classList.add('hidden');
+        }
+
+        function shareTwitter() {
+            const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(dummyUrl)}`;
             window.open(url, '_blank');
         }
 
-        // ② SNSシェア機能
-        function shareToSNS() {
-            const shareData = {
-                title: 'マイボトル運動 - その1本から、未来が変わる。',
-                text: 'マイボトルを使って環境とお財布に優しい生活を始めよう！節約シミュレーターで効果をチェック💧',
-                url: window.location.href
-            };
-            if (navigator.share) {
-                navigator.share(shareData).catch((error) => console.log('シェアキャンセル:', error));
-            } else {
-                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareData.text)}&url=${encodeURIComponent(shareData.url)}`;
-                window.open(twitterUrl, '_blank');
-            }
+        function shareLine() {
+            const url = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(dummyUrl)}`;
+            window.open(url, '_blank');
         }
 
-        // ③ スライダー連動計算機能
-        // スクリプトが読み込まれたタイミングで確実に要素を取得するよう修正
+        function copyLink() {
+            navigator.clipboard.writeText(dummyUrl).then(() => {
+                alert('リンクをコピーしました！');
+            }).catch(err => {
+                alert('コピーに失敗しました。');
+            });
+        }
+
+        // --- 節約シミュレーター ---
         (function() {
             const slider = document.getElementById('bottlesPerWeek');
             const countDisplay = document.getElementById('bottleCountDisplay');
             const savingsDisplay = document.getElementById('savingsDisplay');
             const reducedDisplay = document.getElementById('reducedDisplay');
 
-            if (!slider || !countDisplay || !savingsDisplay || !reducedDisplay) {
-                console.<iframe src="https://www.google.com/maps/d/embed?mid=1ensIznMuI2LncBOPjry2AtLCHHCMvJQ0&ehbc=2E312F" width="640" height="480"></iframe>
-                return;
-            }
+            if (!slider || !countDisplay || !savingsDisplay || !reducedDisplay) return;
 
             const PRICE_PER_BOTTLE = 150;
             const WEEKS_PER_YEAR = 52;
@@ -302,10 +313,7 @@
                 savingsDisplay.textContent = yearlySavings.toLocaleString();
             }
 
-            // スライダーを動かした時のイベントを登録
             slider.addEventListener('input', calculateImpact);
-            
-            // 開いた瞬間の初期計算
             calculateImpact();
         })();
     </script>
